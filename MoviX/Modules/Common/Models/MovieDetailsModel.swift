@@ -29,25 +29,25 @@ struct Movie: Codable {
         case voteCount = "vote_count"
     }
     
-    let adult: Bool
-    let backdropPath: String
-    let belongsToCollection: BelongsToCollection
-    let budget: Int
-    let genres: [Genre]
-    let homepage: String
+    let adult: Bool?
+    let backdropPath: String?
+    let belongsToCollection: BelongsToCollection?
+    let budget: Int?
+    let genres: [Genre]?
+    let homepage: String?
     let id: Int
     let imdbID, originalLanguage, originalTitle, overview: String
-    let popularity: Double
+    let popularity: Double?
     let posterPath: String
-    let productionCompanies: [ProductionCompany]
-    let productionCountries: [ProductionCountry]
+    let productionCompanies: [ProductionCompany]?
+    let productionCountries: [ProductionCountry]?
     let releaseDate: String
-    let revenue, runtime: Int
-    let spokenLanguages: [SpokenLanguage]
-    let status, tagline, title: String
-    let video: Bool
+    let revenue, runtime: Int?
+    let spokenLanguages: [SpokenLanguage]?
+    let status, tagline, title: String?
+    let video: Bool?
     let voteAverage: Double
-    let voteCount: Int
+    let voteCount: Int?
 }
 
 // MARK: - BelongsToCollection
@@ -58,14 +58,14 @@ struct BelongsToCollection: Codable {
         case backdropPath = "backdrop_path"
     }
     
-    let id: Int
-    let name, posterPath, backdropPath: String
+    let id: Int?
+    let name, posterPath, backdropPath: String?
 }
 
 // MARK: - Genre
 struct Genre: Codable {
-    let id: Int
-    let name: String
+    let id: Int?
+    let name: String?
 }
 
 // MARK: - ProductionCompany
@@ -77,8 +77,8 @@ struct ProductionCompany: Codable {
         case originCountry = "origin_country"
     }
     
-    let id: Int
-    let logoPath, name, originCountry: String
+    let id: Int?
+    let logoPath, name, originCountry: String?
 }
 
 // MARK: - ProductionCountry
@@ -88,7 +88,7 @@ struct ProductionCountry: Codable {
         case name
     }
     
-    let iso3166_1, name: String
+    let iso3166_1, name: String?
 }
 
 // MARK: - SpokenLanguage
@@ -99,5 +99,5 @@ struct SpokenLanguage: Codable {
         case name
     }
     
-    let englishName, iso639_1, name: String
+    let englishName, iso639_1, name: String?
 }

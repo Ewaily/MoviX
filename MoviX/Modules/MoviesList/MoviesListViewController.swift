@@ -42,7 +42,6 @@ class MoviesListViewController: MoviesBaseViewController {
     private func setupRefreshControl() {
         refreshControl.addTarget(self, action: #selector(didPullToRefresh(_:)), for: .valueChanged)
     }
-
     
     @objc
     private func openFilter() {
@@ -78,7 +77,9 @@ class MoviesListViewController: MoviesBaseViewController {
 // MARK: - Extensions -
 
 extension MoviesListViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelectRow(index: indexPath.row)
+    }
 }
 
 extension MoviesListViewController: UICollectionViewDataSource {
@@ -132,5 +133,12 @@ extension MoviesListViewController: MoviesListPresenterResponseDelegate {
         }
     }
     
-    func navigateToMovieDetailsScreen(movieId: Int) {}
+    func navigateToMovieDetailsScreen(movieId: Int) {
+        let viewController = MovieDetailsViewController(nibName: Storyboards.MOVIESDETAILSVIEWCONTROLLER.rawValue, bundle: nil)
+        let presenter = MovieDetailsPresenter(delegate: viewController, movieId: movieId)
+        viewController.presenter = presenter
+        if let navigator = navigationController {
+            navigator.pushViewController(viewController, animated: true)
+        }
+    }
 }

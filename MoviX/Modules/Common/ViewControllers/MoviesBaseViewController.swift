@@ -48,9 +48,19 @@ class MoviesBaseViewController: UIViewController {
         self.view.backgroundColor = Colors.BACKGROUND_COLOR
     }
     
+    @objc
+    private func back(sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated:true)
+    }
+    
     func addFilterBarButton(_ selector: Selector?) {
         let filterButton = UIBarButtonItem(image: UIImage(named: Images.FILTER), style: .plain, target: self, action: selector)
         self.navigationItem.rightBarButtonItem = filterButton
+    }
+    
+    func setupBackButton() {
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: Images.BACK), style: .plain, target: self, action: #selector(back(sender:)))
     }
     
     func showLoading(_ show: Bool) {

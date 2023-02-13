@@ -27,7 +27,7 @@ struct Strings {
     static let TOP_RATED = "Top Rated"
     static let TOP_RATED_MOVIES_LIST = "Top Rated Movies List"
     static let MOST_POPULAR_MOVIES_LIST = "Most Popular Movies List"
-
+    static let OVERVIEW = "Overview"
 }
 
 struct EndPoints {
@@ -48,6 +48,9 @@ struct NetworkConstants {
 struct Images {
     static let PLACEHOLDER = "img_placeholder"
     static let FILTER = "img_filter"
+    static let UNFILLED_STAR = "img_unfilledStar"
+    static let FILLED_STAR = "img_filledStar"
+    static let BACK = "img_back"
 }
 
 struct Colors {
