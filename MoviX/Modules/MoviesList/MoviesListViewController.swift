@@ -31,6 +31,13 @@ class MoviesListViewController: MoviesBaseViewController {
         presenter.viewDidLoad()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        guard let flowLayout = moviesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+          flowLayout.invalidateLayout()
+    }
+    
     private func setupMoviesCollectionView() {
         moviesCollectionView.dataSource = self
         moviesCollectionView.delegate = self
@@ -105,18 +112,16 @@ extension MoviesListViewController: UICollectionViewDataSource {
 extension MoviesListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize
-    {
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = view.frame.width
-        let itemWidth = screenWidth * 0.44
+        let itemWidth = screenWidth * (UIWindow.isLandscape ? 0.4 : 0.44)
         let itemHeight = itemWidth * 1.9
         return CGSize(width: itemWidth, height: itemHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAt section: Int) -> UIEdgeInsets
-    {
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
         UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
     }
 }

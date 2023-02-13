@@ -24,7 +24,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="175" height="259"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="259" id="7zC-ch-ybB"/>
-                                    <constraint firstAttribute="width" constant="175" id="Gd5-KU-lSO"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOA-LF-fc6">
@@ -47,13 +46,12 @@
                             <constraint firstItem="uuc-eK-sFf" firstAttribute="leading" secondItem="67J-D9-sa8" secondAttribute="leading" constant="12" id="FBv-Fx-APa"/>
                             <constraint firstAttribute="trailing" secondItem="P7z-W1-MRt" secondAttribute="trailing" id="Wx6-qa-9U8"/>
                             <constraint firstItem="uuc-eK-sFf" firstAttribute="top" secondItem="HOA-LF-fc6" secondAttribute="bottom" constant="8" id="Xdc-eN-yBT"/>
-                            <constraint firstAttribute="height" constant="333" id="YbR-nf-giG"/>
                             <constraint firstItem="HOA-LF-fc6" firstAttribute="top" secondItem="P7z-W1-MRt" secondAttribute="bottom" constant="16" id="aId-qc-eJg"/>
                             <constraint firstItem="P7z-W1-MRt" firstAttribute="top" secondItem="67J-D9-sa8" secondAttribute="top" id="evg-dG-KJN"/>
                             <constraint firstAttribute="trailing" secondItem="uuc-eK-sFf" secondAttribute="trailing" constant="12" id="i1t-so-Tqt"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uuc-eK-sFf" secondAttribute="bottom" constant="2" id="p2C-so-F3b"/>
-                            <constraint firstAttribute="width" constant="175" id="pPl-ny-5Tm"/>
                             <constraint firstItem="HOA-LF-fc6" firstAttribute="leading" secondItem="67J-D9-sa8" secondAttribute="leading" constant="12" id="tJW-7o-KZd"/>
+                            <constraint firstItem="P7z-W1-MRt" firstAttribute="height" secondItem="67J-D9-sa8" secondAttribute="height" multiplier="0.777778" id="yhF-Jt-Wf2"/>
                         </constraints>
                     </view>
                 </subviews>
