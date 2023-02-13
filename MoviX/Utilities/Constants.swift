@@ -5,14 +5,14 @@
 //  Created by Muhammad Ewaily on 12/02/2023.
 //
 
-import Foundation
+import UIKit
 
 enum Storyboards : String {
     case MOVIESDETAILSVIEWCONTROLLER = "MovieDetailsViewController"
 }
 
 enum NibNames : String {
-    case MOVIESLISTTABLEVIEWCELL = "MoviesListTableViewCell"
+    case MOVIESLISTCOLLECTIONVIEWCELL = "MovieCollectionViewCell"
 }
 
 struct Strings {
@@ -21,6 +21,13 @@ struct Strings {
     static let FAILED_TO_GET_YOUR_RESPONSE = "Failed to get your response!"
     static let TRY_AGAIN = "Try again"
     static let CANCEL = "Cancel"
+    static let OK = "Ok"
+    static let FILTER_MOVIES = "Filter Movies"
+    static let MOST_POPULAR = "Most Popular"
+    static let TOP_RATED = "Top Rated"
+    static let TOP_RATED_MOVIES_LIST = "Top Rated Movies List"
+    static let MOST_POPULAR_MOVIES_LIST = "Most Popular Movies List"
+
 }
 
 struct EndPoints {
@@ -40,4 +47,12 @@ struct NetworkConstants {
 
 struct Images {
     static let PLACEHOLDER = "img_placeholder"
+    static let FILTER = "img_filter"
+}
+
+struct Colors {
+    static let BACKGROUND_COLOR = UIColor(named: "color_background")
+    static let MOVIE_CELL_BACKGROUND = UIColor(named: "color_movieCellBackground")
+    static let GRAY = UIColor(named: "Gray")
+    static let WHITE = UIColor(named: "White")
 }
